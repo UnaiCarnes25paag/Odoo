@@ -1,0 +1,21 @@
+<odoo>
+
+    <record id="action_eskola_ikaslea" model="ir.actions.act_window">
+        <field name="name">Ikasleak</field>
+        <field name="res_model">eskola.ikaslea</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+        id="menu_eskola_root"
+        name="Eskola"
+        sequence="10"/>
+
+    <menuitem
+        id="menu_eskola_ikaslea"
+        name="Ikasleak"
+        parent="menu_eskola_root"
+        action="action_eskola_ikaslea"
+        sequence="10"/>
+
+</odoo>
