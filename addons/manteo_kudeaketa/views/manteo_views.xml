@@ -1,0 +1,488 @@
+<odoo>
+    <data>
+        <!-- Ikasleak -->
+        <record id="view_manteo_ikasle_tree" model="ir.ui.view">
+            <field name="name">manteo.ikasle.tree</field>
+            <field name="model">manteo.ikasle</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="abizenak"/>
+                    <field name="ikasmaila"/>
+                    <field name="ikasturtea"/>
+                    <field name="gela_id"/>
+                    <field name="user_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_manteo_ikasle_form" model="ir.ui.view">
+            <field name="name">manteo.ikasle.form</field>
+            <field name="model">manteo.ikasle</field>
+            <field name="arch" type="xml">
+                <form string="Ikaslea">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="abizenak"/>
+                                <field name="ikasmaila"/>
+                                <field name="ikasturtea"/>
+                                <field name="gela_id"/>
+                            </group>
+                            <group>
+                                <field name="email"/>
+                                <field name="telefonoa"/>
+                                <field name="user_id"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Asistentziak">
+                                <field name="asistentzia_ids">
+                                    <tree editable="bottom">
+                                        <field name="data"/>
+                                        <field name="egoera"/>
+                                        <field name="irakasle_id"/>
+                                        <field name="oharrak"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Kalifikazioak">
+                                <field name="kalifikazio_ids">
+                                    <tree editable="bottom">
+                                        <field name="modulua"/>
+                                        <field name="ebaluazioa"/>
+                                        <field name="nota"/>
+                                        <field name="irakasle_id"/>
+                                        <field name="oharrak"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Esleipenak">
+                                <field name="esleipen_ids">
+                                    <tree editable="bottom">
+                                        <field name="gailu_id"/>
+                                        <field name="data_hasiera"/>
+                                        <field name="data_amaiera"/>
+                                        <field name="egoera"/>
+                                        <field name="arduraduna_id"/>
+                                        <field name="oharra"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Gorabeherak">
+                                <field name="gorabehera_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="gailu_id"/>
+                                        <field name="egoera"/>
+                                        <field name="lehentasuna"/>
+                                        <field name="arduraduna_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Asistentziak -->
+        <record id="view_manteo_asistentzia_tree" model="ir.ui.view">
+            <field name="name">manteo.asistentzia.tree</field>
+            <field name="model">manteo.asistentzia</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="data"/>
+                    <field name="ikasle_id"/>
+                    <field name="egoera"/>
+                    <field name="irakasle_id"/>
+                    <field name="oharrak"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_manteo_asistentzia_form" model="ir.ui.view">
+            <field name="name">manteo.asistentzia.form</field>
+            <field name="model">manteo.asistentzia</field>
+            <field name="arch" type="xml">
+                <form string="Asistentzia">
+                    <sheet>
+                        <group>
+                            <field name="ikasle_id"/>
+                            <field name="data"/>
+                            <field name="egoera"/>
+                            <field name="irakasle_id"/>
+                        </group>
+                        <group>
+                            <field name="oharrak"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Kalifikazioak -->
+        <record id="view_manteo_kalifikazio_tree" model="ir.ui.view">
+            <field name="name">manteo.kalifikazio.tree</field>
+            <field name="model">manteo.kalifikazio</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ikasle_id"/>
+                    <field name="modulua"/>
+                    <field name="ebaluazioa"/>
+                    <field name="nota"/>
+                    <field name="irakasle_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_manteo_kalifikazio_form" model="ir.ui.view">
+            <field name="name">manteo.kalifikazio.form</field>
+            <field name="model">manteo.kalifikazio</field>
+            <field name="arch" type="xml">
+                <form string="Kalifikazioa">
+                    <sheet>
+                        <group>
+                            <field name="ikasle_id"/>
+                            <field name="modulua"/>
+                            <field name="ebaluazioa"/>
+                            <field name="nota"/>
+                            <field name="irakasle_id"/>
+                        </group>
+                        <group>
+                            <field name="oharrak"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Gailuak -->
+        <record id="view_manteo_gailu_tree" model="ir.ui.view">
+            <field name="name">manteo.gailu.tree</field>
+            <field name="model">manteo.gailu</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="mota"/>
+                    <field name="seriea"/>
+                    <field name="egoera"/>
+                    <field name="gela_id"/>
+                    <field name="ikasle_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_manteo_gailu_form" model="ir.ui.view">
+            <field name="name">manteo.gailu.form</field>
+            <field name="model">manteo.gailu</field>
+            <field name="arch" type="xml">
+                <form string="Gailua">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="mota"/>
+                                <field name="seriea"/>
+                                <field name="egoera"/>
+                            </group>
+                            <group>
+                                <field name="gela_id"/>
+                                <field name="ikasle_id"/>
+                                <field name="prezioa"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="ohar_teknikoak" colspan="4"/>
+                        </group>
+                        <notebook>
+                            <page string="Esleipenak">
+                                <field name="esleipen_ids">
+                                    <tree>
+                                        <field name="ikasle_id"/>
+                                        <field name="data_hasiera"/>
+                                        <field name="data_amaiera"/>
+                                        <field name="egoera"/>
+                                        <field name="arduraduna_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Gorabeherak">
+                                <field name="gorabehera_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="egoera"/>
+                                        <field name="lehentasuna"/>
+                                        <field name="arduraduna_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Mugimenduak">
+                                <field name="mugimendu_ids">
+                                    <tree>
+                                        <field name="data"/>
+                                        <field name="gela_from_id"/>
+                                        <field name="gela_to_id"/>
+                                        <field name="arduraduna_id"/>
+                                        <field name="arrazoi"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Esleipenak -->
+        <record id="view_manteo_esleipen_tree" model="ir.ui.view">
+            <field name="name">manteo.esleipen.tree</field>
+            <field name="model">manteo.esleipen</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="gailu_id"/>
+                    <field name="ikasle_id"/>
+                    <field name="data_hasiera"/>
+                    <field name="data_amaiera"/>
+                    <field name="egoera"/>
+                    <field name="arduraduna_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_manteo_esleipen_form" model="ir.ui.view">
+            <field name="name">manteo.esleipen.form</field>
+            <field name="model">manteo.esleipen</field>
+            <field name="arch" type="xml">
+                <form string="Esleipena">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="gailu_id"/>
+                            <field name="ikasle_id"/>
+                            <field name="data_hasiera"/>
+                            <field name="data_amaiera"/>
+                            <field name="egoera"/>
+                            <field name="arduraduna_id"/>
+                        </group>
+                        <group>
+                            <field name="oharra"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Gorabeherak -->
+        <record id="view_manteo_gorabehera_tree" model="ir.ui.view">
+            <field name="name">manteo.gorabehera.tree</field>
+            <field name="model">manteo.gorabehera</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="gailu_id"/>
+                    <field name="ikasle_id"/>
+                    <field name="egoera"/>
+                    <field name="lehentasuna"/>
+                    <field name="arduraduna_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_manteo_gorabehera_form" model="ir.ui.view">
+            <field name="name">manteo.gorabehera.form</field>
+            <field name="model">manteo.gorabehera</field>
+            <field name="arch" type="xml">
+                <form string="Gorabehera">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="gailu_id"/>
+                                <field name="ikasle_id"/>
+                            </group>
+                            <group>
+                                <field name="egoera"/>
+                                <field name="lehentasuna"/>
+                                <field name="arduraduna_id"/>
+                                <field name="data_ireki"/>
+                                <field name="data_itxi"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="deskribapena" colspan="4"/>
+                            <field name="oharrak" colspan="4"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Mugimenduak -->
+        <record id="view_manteo_mugimendu_tree" model="ir.ui.view">
+            <field name="name">manteo.mugimendu.tree</field>
+            <field name="model">manteo.mugimendu</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="data"/>
+                    <field name="gailu_id"/>
+                    <field name="gela_from_id"/>
+                    <field name="gela_to_id"/>
+                    <field name="arduraduna_id"/>
+                    <field name="arrazoi"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_manteo_mugimendu_form" model="ir.ui.view">
+            <field name="name">manteo.mugimendu.form</field>
+            <field name="model">manteo.mugimendu</field>
+            <field name="arch" type="xml">
+                <form string="Mugimendua">
+                    <sheet>
+                        <group>
+                            <field name="gailu_id"/>
+                            <field name="gela_from_id"/>
+                            <field name="gela_to_id"/>
+                            <field name="data"/>
+                            <field name="arduraduna_id"/>
+                        </group>
+                        <group>
+                            <field name="arrazoi"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Erosketak -->
+        <record id="view_manteo_erosketa_tree" model="ir.ui.view">
+            <field name="name">manteo.erosketa.tree</field>
+            <field name="model">manteo.erosketa</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="mota"/>
+                    <field name="kantitatea"/>
+                    <field name="gela_id"/>
+                    <field name="egoera"/>
+                    <field name="eskatzailea_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_manteo_erosketa_form" model="ir.ui.view">
+            <field name="name">manteo.erosketa.form</field>
+            <field name="model">manteo.erosketa</field>
+            <field name="arch" type="xml">
+                <form string="Erosketa eskaera">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="mota"/>
+                            <field name="kantitatea"/>
+                            <field name="gela_id"/>
+                            <field name="egoera"/>
+                            <field name="eskatzailea_id"/>
+                        </group>
+                        <group>
+                            <field name="kostua_estimatua"/>
+                            <field name="oharrak"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Gelak -->
+        <record id="view_manteo_gela_tree" model="ir.ui.view">
+            <field name="name">manteo.gela.tree</field>
+            <field name="model">manteo.gela</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="kodea"/>
+                    <field name="kokapena"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_manteo_gela_form" model="ir.ui.view">
+            <field name="name">manteo.gela.form</field>
+            <field name="model">manteo.gela</field>
+            <field name="arch" type="xml">
+                <form string="Gela">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="kodea"/>
+                            <field name="kokapena"/>
+                        </group>
+                        <group>
+                            <field name="oharrak"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Ekintzak -->
+        <record id="action_manteo_ikasle" model="ir.actions.act_window">
+            <field name="name">Ikasleak</field>
+            <field name="res_model">manteo.ikasle</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'default_active': True}</field>
+        </record>
+
+        <record id="action_manteo_asistentzia" model="ir.actions.act_window">
+            <field name="name">Asistentziak</field>
+            <field name="res_model">manteo.asistentzia</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_manteo_kalifikazio" model="ir.actions.act_window">
+            <field name="name">Kalifikazioak</field>
+            <field name="res_model">manteo.kalifikazio</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_manteo_gailu" model="ir.actions.act_window">
+            <field name="name">Gailuak</field>
+            <field name="res_model">manteo.gailu</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_manteo_esleipen" model="ir.actions.act_window">
+            <field name="name">Esleipenak</field>
+            <field name="res_model">manteo.esleipen</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_manteo_gorabehera" model="ir.actions.act_window">
+            <field name="name">Gorabeherak</field>
+            <field name="res_model">manteo.gorabehera</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_manteo_mugimendu" model="ir.actions.act_window">
+            <field name="name">Mugimenduak</field>
+            <field name="res_model">manteo.mugimendu</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_manteo_erosketa" model="ir.actions.act_window">
+            <field name="name">Erosketak</field>
+            <field name="res_model">manteo.erosketa</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_manteo_gela" model="ir.actions.act_window">
+            <field name="name">Gelak</field>
+            <field name="res_model">manteo.gela</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

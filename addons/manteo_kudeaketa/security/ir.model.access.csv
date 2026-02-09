@@ -1,0 +1,38 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_admin_ikasle,manteo.ikasle admin,model_manteo_ikasle,manteo_kudeaketa.group_manteo_admin,1,1,1,1
+access_admin_asistentzia,manteo.asistentzia admin,model_manteo_asistentzia,manteo_kudeaketa.group_manteo_admin,1,1,1,1
+access_admin_kalifikazio,manteo.kalifikazio admin,model_manteo_kalifikazio,manteo_kudeaketa.group_manteo_admin,1,1,1,1
+access_admin_gailu,manteo.gailu admin,model_manteo_gailu,manteo_kudeaketa.group_manteo_admin,1,1,1,1
+access_admin_esleipen,manteo.esleipen admin,model_manteo_esleipen,manteo_kudeaketa.group_manteo_admin,1,1,1,1
+access_admin_gorabehera,manteo.gorabehera admin,model_manteo_gorabehera,manteo_kudeaketa.group_manteo_admin,1,1,1,1
+access_admin_mugimendu,manteo.mugimendu admin,model_manteo_mugimendu,manteo_kudeaketa.group_manteo_admin,1,1,1,1
+access_admin_erosketa,manteo.erosketa admin,model_manteo_erosketa,manteo_kudeaketa.group_manteo_admin,1,1,1,1
+access_admin_gela,manteo.gela admin,model_manteo_gela,manteo_kudeaketa.group_manteo_admin,1,1,1,1
+
+access_irakasle_ikasle,manteo.ikasle irakasle,model_manteo_ikasle,manteo_kudeaketa.group_manteo_irakasle,1,0,0,0
+access_irakasle_asistentzia,manteo.asistentzia irakasle,model_manteo_asistentzia,manteo_kudeaketa.group_manteo_irakasle,1,1,1,0
+access_irakasle_kalifikazio,manteo.kalifikazio irakasle,model_manteo_kalifikazio,manteo_kudeaketa.group_manteo_irakasle,1,1,1,0
+access_irakasle_gailu,manteo.gailu irakasle,model_manteo_gailu,manteo_kudeaketa.group_manteo_irakasle,1,0,0,0
+access_irakasle_esleipen,manteo.esleipen irakasle,model_manteo_esleipen,manteo_kudeaketa.group_manteo_irakasle,1,1,1,0
+access_irakasle_gorabehera,manteo.gorabehera irakasle,model_manteo_gorabehera,manteo_kudeaketa.group_manteo_irakasle,1,0,0,0
+access_irakasle_gela,manteo.gela irakasle,model_manteo_gela,manteo_kudeaketa.group_manteo_irakasle,1,0,0,0
+
+access_mantentze_ikasle,manteo.ikasle mantentze,model_manteo_ikasle,manteo_kudeaketa.group_manteo_mantentze,1,0,0,0
+access_mantentze_gailu,manteo.gailu mantentze,model_manteo_gailu,manteo_kudeaketa.group_manteo_mantentze,1,1,1,1
+access_mantentze_esleipen,manteo.esleipen mantentze,model_manteo_esleipen,manteo_kudeaketa.group_manteo_mantentze,1,1,1,1
+access_mantentze_gorabehera,manteo.gorabehera mantentze,model_manteo_gorabehera,manteo_kudeaketa.group_manteo_mantentze,1,1,1,1
+access_mantentze_mugimendu,manteo.mugimendu mantentze,model_manteo_mugimendu,manteo_kudeaketa.group_manteo_mantentze,1,1,1,1
+access_mantentze_erosketa,manteo.erosketa mantentze,model_manteo_erosketa,manteo_kudeaketa.group_manteo_mantentze,1,1,1,1
+access_mantentze_gela,manteo.gela mantentze,model_manteo_gela,manteo_kudeaketa.group_manteo_mantentze,1,1,1,1
+access_mantentze_asistentzia,manteo.asistentzia mantentze,model_manteo_asistentzia,manteo_kudeaketa.group_manteo_mantentze,1,0,0,0
+access_mantentze_kalifikazio,manteo.kalifikazio mantentze,model_manteo_kalifikazio,manteo_kudeaketa.group_manteo_mantentze,1,0,0,0
+
+access_ikasle_ikasle,manteo.ikasle ikasle,model_manteo_ikasle,manteo_kudeaketa.group_manteo_ikasle,1,0,0,0
+access_ikasle_asistentzia,manteo.asistentzia ikasle,model_manteo_asistentzia,manteo_kudeaketa.group_manteo_ikasle,1,0,0,0
+access_ikasle_kalifikazio,manteo.kalifikazio ikasle,model_manteo_kalifikazio,manteo_kudeaketa.group_manteo_ikasle,1,0,0,0
+access_ikasle_esleipen,manteo.esleipen ikasle,model_manteo_esleipen,manteo_kudeaketa.group_manteo_ikasle,1,0,0,0
+access_ikasle_gorabehera,manteo.gorabehera ikasle,model_manteo_gorabehera,manteo_kudeaketa.group_manteo_ikasle,1,0,0,0
+access_ikasle_gailu,manteo.gailu ikasle,model_manteo_gailu,manteo_kudeaketa.group_manteo_ikasle,1,0,0,0
+access_ikasle_mugimendu,manteo.mugimendu ikasle,model_manteo_mugimendu,manteo_kudeaketa.group_manteo_ikasle,0,0,0,0
+access_ikasle_erosketa,manteo.erosketa ikasle,model_manteo_erosketa,manteo_kudeaketa.group_manteo_ikasle,0,0,0,0
+access_ikasle_gela,manteo.gela ikasle,model_manteo_gela,manteo_kudeaketa.group_manteo_ikasle,0,0,0,0

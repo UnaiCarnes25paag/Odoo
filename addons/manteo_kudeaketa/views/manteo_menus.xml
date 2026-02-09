@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <menuitem id="menu_manteo_root" name="Manteo" sequence="10" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_irakasle,manteo_kudeaketa.group_manteo_mantentze"/>
+
+        <menuitem id="menu_manteo_ikasle" name="Ikasleak" parent="menu_manteo_root" action="action_manteo_ikasle" sequence="10" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_irakasle"/>
+        <menuitem id="menu_manteo_asistentzia" name="Asistentziak" parent="menu_manteo_root" action="action_manteo_asistentzia" sequence="20" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_irakasle"/>
+        <menuitem id="menu_manteo_kalifikazio" name="Kalifikazioak" parent="menu_manteo_root" action="action_manteo_kalifikazio" sequence="30" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_irakasle"/>
+
+        <menuitem id="menu_manteo_inbentario" name="Inbentarioa" parent="menu_manteo_root" sequence="40" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_mantentze"/>
+        <menuitem id="menu_manteo_gailu" name="Gailuak" parent="menu_manteo_inbentario" action="action_manteo_gailu" sequence="10" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_mantentze"/>
+        <menuitem id="menu_manteo_esleipen" name="Esleipenak" parent="menu_manteo_inbentario" action="action_manteo_esleipen" sequence="20" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_irakasle,manteo_kudeaketa.group_manteo_mantentze"/>
+        <menuitem id="menu_manteo_gorabehera" name="Gorabeherak" parent="menu_manteo_inbentario" action="action_manteo_gorabehera" sequence="30" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_mantentze"/>
+        <menuitem id="menu_manteo_mugimendu" name="Mugimenduak" parent="menu_manteo_inbentario" action="action_manteo_mugimendu" sequence="40" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_mantentze"/>
+        <menuitem id="menu_manteo_erosketa" name="Erosketak" parent="menu_manteo_inbentario" action="action_manteo_erosketa" sequence="50" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_mantentze"/>
+        <menuitem id="menu_manteo_gela" name="Gelak" parent="menu_manteo_inbentario" action="action_manteo_gela" sequence="60" groups="manteo_kudeaketa.group_manteo_admin,manteo_kudeaketa.group_manteo_mantentze"/>
+
+        <menuitem id="menu_manteo_nirea" name="Nire espazioa" parent="menu_manteo_root" sequence="90" groups="manteo_kudeaketa.group_manteo_ikasle"/>
+        <menuitem id="menu_manteo_nire_ikaslea" name="Nire datuak" parent="menu_manteo_nirea" action="action_manteo_ikasle" sequence="10" groups="manteo_kudeaketa.group_manteo_ikasle"/>
+        <menuitem id="menu_manteo_nire_asistentzia" name="Nire asistentziak" parent="menu_manteo_nirea" action="action_manteo_asistentzia" sequence="20" groups="manteo_kudeaketa.group_manteo_ikasle"/>
+        <menuitem id="menu_manteo_nire_kalifikazio" name="Nire kalifikazioak" parent="menu_manteo_nirea" action="action_manteo_kalifikazio" sequence="30" groups="manteo_kudeaketa.group_manteo_ikasle"/>
+        <menuitem id="menu_manteo_nire_esleipen" name="Nire gailuak" parent="menu_manteo_nirea" action="action_manteo_esleipen" sequence="40" groups="manteo_kudeaketa.group_manteo_ikasle"/>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+<odoo>
+    <template id="website_manteo_home" name="Manteo Webgunea" page="True">
+        <t t-call="website.layout">
+            <div class="container mt-5 mb-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1>Xabier-Zubiri-Manteo</h1>
+                        <p class="lead">Informatika zikloen kudeaketa plataforma (MS, SSA, WG, PAAG).</p>
+                        <p>Ikasle eta irakasleen informazioa, gailuen inbentarioa eta gorabeheren jarraipena zentralizatzen ditugu.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h3>Harremanetarako</h3>
+                                <p>Helbidea: Donostia</p>
+                                <p>Emaila: info@zubiri-manteo.eus</p>
+                                <p>Telefonoa: 943 00 00 00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
