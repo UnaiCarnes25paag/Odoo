@@ -5,14 +5,14 @@
             <field name="name">manteo.ikasle.tree</field>
             <field name="model">manteo.ikasle</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="name"/>
                     <field name="abizenak"/>
                     <field name="ikasmaila"/>
                     <field name="ikasturtea"/>
                     <field name="gela_id"/>
                     <field name="user_id"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -40,46 +40,46 @@
                         <notebook>
                             <page string="Asistentziak">
                                 <field name="asistentzia_ids">
-                                    <tree editable="bottom">
+                                    <list editable="bottom">
                                         <field name="data"/>
                                         <field name="egoera"/>
                                         <field name="irakasle_id"/>
                                         <field name="oharrak"/>
-                                    </tree>
+                                    </list>
                                 </field>
                             </page>
                             <page string="Kalifikazioak">
                                 <field name="kalifikazio_ids">
-                                    <tree editable="bottom">
+                                    <list editable="bottom">
                                         <field name="modulua"/>
                                         <field name="ebaluazioa"/>
                                         <field name="nota"/>
                                         <field name="irakasle_id"/>
                                         <field name="oharrak"/>
-                                    </tree>
+                                    </list>
                                 </field>
                             </page>
                             <page string="Esleipenak">
                                 <field name="esleipen_ids">
-                                    <tree editable="bottom">
+                                    <list editable="bottom">
                                         <field name="gailu_id"/>
                                         <field name="data_hasiera"/>
                                         <field name="data_amaiera"/>
                                         <field name="egoera"/>
                                         <field name="arduraduna_id"/>
                                         <field name="oharra"/>
-                                    </tree>
+                                    </list>
                                 </field>
                             </page>
                             <page string="Gorabeherak">
                                 <field name="gorabehera_ids">
-                                    <tree>
+                                    <list>
                                         <field name="name"/>
                                         <field name="gailu_id"/>
                                         <field name="egoera"/>
                                         <field name="lehentasuna"/>
                                         <field name="arduraduna_id"/>
-                                    </tree>
+                                    </list>
                                 </field>
                             </page>
                         </notebook>
@@ -93,13 +93,13 @@
             <field name="name">manteo.asistentzia.tree</field>
             <field name="model">manteo.asistentzia</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="data"/>
                     <field name="ikasle_id"/>
                     <field name="egoera"/>
                     <field name="irakasle_id"/>
                     <field name="oharrak"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -128,13 +128,13 @@
             <field name="name">manteo.kalifikazio.tree</field>
             <field name="model">manteo.kalifikazio</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="ikasle_id"/>
                     <field name="modulua"/>
                     <field name="ebaluazioa"/>
                     <field name="nota"/>
                     <field name="irakasle_id"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -164,14 +164,14 @@
             <field name="name">manteo.gailu.tree</field>
             <field name="model">manteo.gailu</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="name"/>
                     <field name="mota"/>
                     <field name="seriea"/>
                     <field name="egoera"/>
                     <field name="gela_id"/>
                     <field name="ikasle_id"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -200,34 +200,34 @@
                         <notebook>
                             <page string="Esleipenak">
                                 <field name="esleipen_ids">
-                                    <tree>
+                                    <list>
                                         <field name="ikasle_id"/>
                                         <field name="data_hasiera"/>
                                         <field name="data_amaiera"/>
                                         <field name="egoera"/>
                                         <field name="arduraduna_id"/>
-                                    </tree>
+                                    </list>
                                 </field>
                             </page>
                             <page string="Gorabeherak">
                                 <field name="gorabehera_ids">
-                                    <tree>
+                                    <list>
                                         <field name="name"/>
                                         <field name="egoera"/>
                                         <field name="lehentasuna"/>
                                         <field name="arduraduna_id"/>
-                                    </tree>
+                                    </list>
                                 </field>
                             </page>
                             <page string="Mugimenduak">
                                 <field name="mugimendu_ids">
-                                    <tree>
+                                    <list>
                                         <field name="data"/>
                                         <field name="gela_from_id"/>
                                         <field name="gela_to_id"/>
                                         <field name="arduraduna_id"/>
                                         <field name="arrazoi"/>
-                                    </tree>
+                                    </list>
                                 </field>
                             </page>
                         </notebook>
@@ -241,7 +241,7 @@
             <field name="name">manteo.esleipen.tree</field>
             <field name="model">manteo.esleipen</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="name"/>
                     <field name="gailu_id"/>
                     <field name="ikasle_id"/>
@@ -249,7 +249,7 @@
                     <field name="data_amaiera"/>
                     <field name="egoera"/>
                     <field name="arduraduna_id"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -281,14 +281,14 @@
             <field name="name">manteo.gorabehera.tree</field>
             <field name="model">manteo.gorabehera</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="name"/>
                     <field name="gailu_id"/>
                     <field name="ikasle_id"/>
                     <field name="egoera"/>
                     <field name="lehentasuna"/>
                     <field name="arduraduna_id"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -326,14 +326,14 @@
             <field name="name">manteo.mugimendu.tree</field>
             <field name="model">manteo.mugimendu</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="data"/>
                     <field name="gailu_id"/>
                     <field name="gela_from_id"/>
                     <field name="gela_to_id"/>
                     <field name="arduraduna_id"/>
                     <field name="arrazoi"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -363,14 +363,14 @@
             <field name="name">manteo.erosketa.tree</field>
             <field name="model">manteo.erosketa</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="name"/>
                     <field name="mota"/>
                     <field name="kantitatea"/>
                     <field name="gela_id"/>
                     <field name="egoera"/>
                     <field name="eskatzailea_id"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -402,11 +402,11 @@
             <field name="name">manteo.gela.tree</field>
             <field name="model">manteo.gela</field>
             <field name="arch" type="xml">
-                <tree>
+                <list>
                     <field name="name"/>
                     <field name="kodea"/>
                     <field name="kokapena"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -433,56 +433,56 @@
         <record id="action_manteo_ikasle" model="ir.actions.act_window">
             <field name="name">Ikasleak</field>
             <field name="res_model">manteo.ikasle</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
             <field name="context">{'default_active': True}</field>
         </record>
 
         <record id="action_manteo_asistentzia" model="ir.actions.act_window">
             <field name="name">Asistentziak</field>
             <field name="res_model">manteo.asistentzia</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
         </record>
 
         <record id="action_manteo_kalifikazio" model="ir.actions.act_window">
             <field name="name">Kalifikazioak</field>
             <field name="res_model">manteo.kalifikazio</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
         </record>
 
         <record id="action_manteo_gailu" model="ir.actions.act_window">
             <field name="name">Gailuak</field>
             <field name="res_model">manteo.gailu</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
         </record>
 
         <record id="action_manteo_esleipen" model="ir.actions.act_window">
             <field name="name">Esleipenak</field>
             <field name="res_model">manteo.esleipen</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
         </record>
 
         <record id="action_manteo_gorabehera" model="ir.actions.act_window">
             <field name="name">Gorabeherak</field>
             <field name="res_model">manteo.gorabehera</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
         </record>
 
         <record id="action_manteo_mugimendu" model="ir.actions.act_window">
             <field name="name">Mugimenduak</field>
             <field name="res_model">manteo.mugimendu</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
         </record>
 
         <record id="action_manteo_erosketa" model="ir.actions.act_window">
             <field name="name">Erosketak</field>
             <field name="res_model">manteo.erosketa</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
         </record>
 
         <record id="action_manteo_gela" model="ir.actions.act_window">
             <field name="name">Gelak</field>
             <field name="res_model">manteo.gela</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
         </record>
     </data>
 </odoo>

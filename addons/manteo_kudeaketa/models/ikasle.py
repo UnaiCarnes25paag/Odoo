@@ -31,4 +31,3 @@ class ManteoIkasle(models.Model):
     kalifikazio_ids = fields.One2many('manteo.kalifikazio', 'ikasle_id', string='Kalifikazioak')
     gorabehera_ids = fields.One2many('manteo.gorabehera', 'ikasle_id', string='Gorabeherak')
     active = fields.Boolean(default=True, string='Aktibo')
-*** End of File

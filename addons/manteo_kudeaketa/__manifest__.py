@@ -17,7 +17,6 @@ kalifikazioak, gailuak, esleipenak eta gorabeherak.
         'security/ir.model.access.csv',
         'views/manteo_views.xml',
         'views/manteo_menus.xml',
-        'views/website_templates.xml',
     ],
     'installable': True,
     'application': True,

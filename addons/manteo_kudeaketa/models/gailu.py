@@ -39,5 +39,3 @@ class ManteoGailu(models.Model):
     erosketa_id = fields.Many2one('manteo.erosketa', string='Erosketa eskaera')
     prezioa = fields.Float(string='Erosketa prezioa')
     ohar_teknikoak = fields.Text(string='Ohar teknikoak')
-
-*** End of File
